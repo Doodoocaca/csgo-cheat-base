@@ -6,7 +6,7 @@ unsigned long WINAPI initialize(void* instance) {
 		Sleep(200);
 
 #ifdef _DEBUG
-	console::initialize("csgo-cheat console");
+	console::initialize("propsense console");
 #endif
 
 	try {
@@ -16,7 +16,7 @@ unsigned long WINAPI initialize(void* instance) {
 	}
 
 	catch (const std::runtime_error & error) {
-		MessageBoxA(nullptr, error.what(), "csgo-cheat error!", MB_OK | MB_ICONERROR);
+		MessageBoxA(nullptr, error.what(), "propsense error!", MB_OK | MB_ICONERROR);
 		FreeLibraryAndExitThread(static_cast<HMODULE>(instance), 0);
 	}
 
